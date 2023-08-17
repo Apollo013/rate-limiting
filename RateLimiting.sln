@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33627.172
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RateLimiting.FixedWindowLimiter", "RateLimiting.FixedWindowLimiter\RateLimiting.FixedWindowLimiter.csproj", "{843D8481-A766-455E-B5C2-80DE90405268}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{843D8481-A766-455E-B5C2-80DE90405268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{843D8481-A766-455E-B5C2-80DE90405268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{843D8481-A766-455E-B5C2-80DE90405268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{843D8481-A766-455E-B5C2-80DE90405268}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7808CABB-E391-4108-8BB8-5FDF6DB0B478}
+	EndGlobalSection
+EndGlobal
