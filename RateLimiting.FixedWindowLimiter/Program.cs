@@ -10,12 +10,17 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddRateLimiter(rateLimiterOptions =>
 {
-    rateLimiterOptions.AddFixedWindowLimiter("FixedPolicy", options =>
+    rateLimiterOptions.AddFixedWindowLimiter(RateLimitType.FixedWindow, options =>
     {
-        // Allow 3 requests every 10 seconds
-        options.Window = TimeSpan.FromSeconds(10);
-        options.PermitLimit = 3;
-    });
+        // Allow 10 requests every 1 seconds
+        // Add the next 10 requests to a queue
+        // If the queue is full, oldest requests are processed first
+        // Any other requests are rejected with status code 429
+        options.Window = TimeSpan.FromSeconds(1);
+        options.PermitLimit = 10;
+        options.QueueLimit = 10;
+        options.QueueProcessingOrder = System.Threading.RateLimiting.QueueProcessingOrder.OldestFirst;
+    }).RejectionStatusCode = 429;
 });
 
 var app = builder.Build();

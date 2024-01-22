@@ -12,7 +12,7 @@
             })
             .WithName("GetEmployees")
             .WithOpenApi()
-            .RequireRateLimiting("FixedPolicy");
+            .RequireRateLimiting(RateLimitType.FixedWindow);
         }
     }
 }
